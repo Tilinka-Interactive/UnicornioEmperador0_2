@@ -15,11 +15,11 @@ F:/Unicornio Emperador/Unity/Emperor0_2/UnicornioEmperador0_2/UnicornioEmperador
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65366
+61962
 Successfully changed project path to: F:/Unicornio Emperador/Unity/Emperor0_2/UnicornioEmperador0_2/UnicornioEmperador0_2
 F:/Unicornio Emperador/Unity/Emperor0_2/UnicornioEmperador0_2/UnicornioEmperador0_2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 50.12 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 86.36 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.28f1 (f5400f52e03f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/2020.3.28f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/2020.3.28f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/2020.3.28f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/2020.3.28f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56908
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/2020.3.28f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002035 seconds.
+Registered in 0.002291 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 48.52 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 50.84 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.677 seconds
+- Completed reload, in  0.675 seconds
 Domain Reload Profiling:
-	ReloadAssembly (677ms)
-		BeginReloadAssembly (88ms)
+	ReloadAssembly (675ms)
+		BeginReloadAssembly (70ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (501ms)
-			LoadAssemblies (86ms)
+		EndReloadAssembly (524ms)
+			LoadAssemblies (68ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (166ms)
+			SetupTypeCache (173ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (189ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (203ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (49ms)
-				BeforeProcessingInitializeOnLoad (16ms)
-				ProcessInitializeOnLoadAttributes (91ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
+				RefreshPlugins (51ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (93ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003544 seconds.
+Registered in 0.003360 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 57.78 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 63.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.523 seconds
+- Completed reload, in  1.758 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1524ms)
-		BeginReloadAssembly (167ms)
+	ReloadAssembly (1759ms)
+		BeginReloadAssembly (295ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1276ms)
-			LoadAssemblies (119ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1363ms)
+			LoadAssemblies (176ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (412ms)
+			SetupTypeCache (437ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (93ms)
-			SetupLoadedEditorAssemblies (415ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (500ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (58ms)
-				BeforeProcessingInitializeOnLoad (98ms)
-				ProcessInitializeOnLoadAttributes (229ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
+				RefreshPlugins (63ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (312ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
 				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 1.68 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2300 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.7 MB.
-System memory in use after: 99.9 MB.
+Unloading 2304 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.8 MB.
+System memory in use after: 100.0 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2720.
-Total: 4.853200 ms (FindLiveObjects: 0.283200 ms CreateObjectMapping: 0.153000 ms MarkObjects: 4.281200 ms  DeleteObjects: 0.134100 ms)
+Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 2728.
+Total: 3.069100 ms (FindLiveObjects: 0.194900 ms CreateObjectMapping: 0.112600 ms MarkObjects: 2.674400 ms  DeleteObjects: 0.085600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -133,848 +133,7 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
   path: Assets/Scripts/MazeGenerator.cs
   artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f725b78f0e26f0c1526cdb3d982fd2') in 0.058106 seconds 
-  Import took 0.063114 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.784051 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36327eda7a052fe897793388b221a060') in 0.004197 seconds 
-  Import took 0.008307 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 133.900472 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa2d8ed953577a70ac53eef12b42cf9') in 0.004312 seconds 
-  Import took 0.007572 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 75.952012 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd33a8365c91916621697c841ed9eb946') in 0.002665 seconds 
-  Import took 0.006307 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.096355 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0521e68360a26c4a73ee03675e1de6f1') in 0.005753 seconds 
-  Import took 0.009163 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.905565 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eaae258b6419a76181fc9cf29e9d14b') in 0.002268 seconds 
-  Import took 0.005585 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.082781 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4343b2b64219943976eb67cd4d91a9f') in 0.004587 seconds 
-  Import took 0.008389 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.102684 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9637a28a9d8c81b5f4d14fd8f5158bc') in 0.004757 seconds 
-  Import took 0.010380 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 53.290229 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c0f8fdbb20e8ec487da74b9a022445') in 0.004024 seconds 
-  Import took 0.011429 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.327120 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a10c0512d62e93756fe0c7a22d9f71ca') in 0.002396 seconds 
-  Import took 0.006215 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 80.678804 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17cc3bcc448a582f5d8da4928b42d275') in 0.004027 seconds 
-  Import took 0.031553 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 111.591368 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '320f891258d5b8a1723f77b1dcf24ed1') in 0.006247 seconds 
-  Import took 0.010214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 215.852615 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08291998d5077955d6a28337bfd69a9e') in 0.004042 seconds 
-  Import took 0.008502 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 150.239939 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63dbf01e1971e659d48a51a8f0fbe87d') in 0.005817 seconds 
-  Import took 0.017390 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 66.312911 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e033ec8fa2399001abc4854e6416a65e') in 0.008171 seconds 
-  Import took 0.012067 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.090668 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2ce3b09d4b6405d9b661713b55ed8f7') in 0.003804 seconds 
-  Import took 0.007137 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 307.557944 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c267c90abba598863f13baacf29178') in 0.008481 seconds 
-  Import took 0.012578 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 233.886094 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5e6063ea9a3274f7f10259f9b242835') in 0.004106 seconds 
-  Import took 0.009021 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.598280 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c9b1b7a31c3e63b9ab85c2d521e7381') in 0.004654 seconds 
-  Import took 0.011245 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.221412 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '987e8231fe8096eb0028e17f2ddf25f9') in 0.006479 seconds 
-  Import took 0.016744 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.168771 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81798522feae3b97ce5932f1d785ca02') in 0.004489 seconds 
-  Import took 0.008265 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 323.769384 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42b2836c2da438d90d0f7926e6baeb89') in 0.002439 seconds 
-  Import took 0.007633 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.123401 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d79026ac7c5f2c8eea87aac3c2a659b') in 0.004022 seconds 
-  Import took 0.017733 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 103.999753 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b933a8d0b515f5eb68d033de6b4051e0') in 0.003928 seconds 
-  Import took 0.016839 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.806788 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c3b83c2e623e48672580c23402b6ad') in 0.003881 seconds 
-  Import took 0.007290 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.987874 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b509d18739b12dfcec149c2ede4e14e') in 0.004401 seconds 
-  Import took 0.015918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 118.176895 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '438229d8eae5b56e02b0f92ee2d9c031') in 0.003900 seconds 
-  Import took 0.014412 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.775994 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55d7660e0bd68f50e22cc88d9f2688fd') in 0.004147 seconds 
-  Import took 0.007649 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.993672 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb3257dfb137889a5e8375bafa64d7de') in 0.004073 seconds 
-  Import took 0.015581 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 93.630114 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46400ec73fda1ddec651f5d02328795e') in 0.005487 seconds 
-  Import took 0.016815 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.016007 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15dae245a46fda132352404f7c063038') in 0.003923 seconds 
-  Import took 0.007352 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 595.113499 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a749c77c339eb7adefe31d31038e5eb') in 0.009182 seconds 
-  Import took 0.013322 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.151933 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eba679d40a17c8d4be4d8aa22335a3d') in 0.005121 seconds 
-  Import took 0.008711 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 74.249278 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f43a22395ef33e07c3f253499ce13b3') in 0.003995 seconds 
-  Import took 0.007358 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.497105 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c84c29eeb71c67788d146b04c176ebb') in 0.002354 seconds 
-  Import took 0.022331 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.218412 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36b4abf6ce4111a6fa844d2a7fa2bb70') in 0.004269 seconds 
-  Import took 0.009348 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.992803 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c06412c616bf0f4e940fb703ad5898b') in 0.004556 seconds 
-  Import took 0.009319 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.622800 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764eb84fe10f0ab489bf0832041e2204') in 0.004229 seconds 
-  Import took 0.007687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.603109 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cbc219cd53e94314e18b6beb152e1b4') in 0.004603 seconds 
-  Import took 0.008693 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.161592 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d60c0ec6a777ff014a5dd400a0e13e9') in 0.004116 seconds 
-  Import took 0.007572 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.312013 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f251f1eda8bffc39b45df4ed6a9cf1') in 0.002489 seconds 
-  Import took 0.005946 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.733105 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f96ba6b390affadab51f94e7c8db1e60') in 0.002314 seconds 
-  Import took 0.009045 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.814768 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '727af6a633a6a35c7a53dc96f0c4a8e6') in 0.002689 seconds 
-  Import took 0.012804 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.684112 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e33787ef82df68c481792863a33c2b') in 0.002561 seconds 
-  Import took 0.005982 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.752056 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bbb4dc2ef66b1f7afc46082b3a4d2b0') in 0.002237 seconds 
-  Import took 0.013165 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.434429 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1beb305fd068cfa4cf6a9ae150ff53c9') in 0.002251 seconds 
-  Import took 0.005959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.814029 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '426be335ad98670bae2e41900cb709ce') in 0.002775 seconds 
-  Import took 0.007018 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.001525 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e79eb61db3ae39b0003a4878c088a54') in 0.002550 seconds 
-  Import took 0.006044 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.354478 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000290 seconds  code(4) message(Build asset version error: assets/scripts/mazegenerator.cs in SourceAssetDB has modification time of '2022-02-13T00:40:33.8809666Z' while content on disk has modification time of '2022-02-13T00:40:34.132575Z')
-  ERROR: Build asset version error: assets/scripts/mazegenerator.cs in SourceAssetDB has modification time of '2022-02-13T00:40:33.8809666Z' while content on disk has modification time of '2022-02-13T00:40:34.132575Z'
-  Import took 0.004141 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.359156 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f19a7491b0cea9daa3b460f892e9c7') in 0.002663 seconds 
-  Import took 0.012119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 38.783078 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f8427070f205376469323d8dbdebc0') in 0.002359 seconds 
-  Import took 0.018128 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.119103 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6200a5d25d4ad27c2ef2ed428b23050d') in 0.002551 seconds 
-  Import took 0.010211 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.079378 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea457be719486effeb5ad22fd5375ebf') in 0.002258 seconds 
-  Import took 0.005920 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.317470 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4703000967c05418b94639537835e7a4') in 0.002387 seconds 
-  Import took 0.005726 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 573.302244 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '222e0ca6d9827518d471350b510e940c') in 0.002759 seconds 
-  Import took 0.006923 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 73.212038 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651e12600d7dbe87484b843ec0640829') in 0.002508 seconds 
-  Import took 0.015708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.834845 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a004201fb3037815151e85ffe04639') in 0.002405 seconds 
-  Import took 0.005885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.901987 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20fc9153fa19c712ec67f8ffbaae105b') in 0.002347 seconds 
-  Import took 0.006564 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.024002 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdbb69a053b06b96cd4769b6da27426f') in 0.002353 seconds 
-  Import took 0.026655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.608535 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '982ba893f95df5deb22c3d7c0afb7f3a') in 0.002505 seconds 
-  Import took 0.006620 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.272867 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5998c98ee4336e1a14b5be6592a707b1') in 0.002546 seconds 
-  Import took 0.006056 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.643777 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '168bd5e12424d186959957e514751673') in 0.002187 seconds 
-  Import took 0.005422 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.539488 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dd04ef44a59c9acb6ac6f58eb70f8a2') in 0.002597 seconds 
-  Import took 0.017031 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.540964 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9c8465ad75517760b75092fcc2d1570') in 0.002506 seconds 
-  Import took 0.006133 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.119779 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3392e40a04e9fb7cb84f30eb5ac49711') in 0.002617 seconds 
-  Import took 0.005908 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.054227 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4272583ef3972fecf3b5f8b12bc8289b') in 0.002866 seconds 
-  Import took 0.007362 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.439354 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cccb35ab6738f1a934f25aa84c3e36d') in 0.002918 seconds 
-  Import took 0.007312 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.564175 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fecac1ddebf6cabdb64154c685c6cb4e') in 0.002379 seconds 
-  Import took 0.015630 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.053638 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52a87aa8b4799e7f21acb3cc93b7cdf9') in 0.002693 seconds 
-  Import took 0.026886 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.497186 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24137df4777deff89ea5410296b686c4') in 0.002914 seconds 
-  Import took 0.006723 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.330582 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c1b16b6d323996924d69a1c449e89d') in 0.002300 seconds 
-  Import took 0.005871 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.950774 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81b9d35e818fb022d3dda70d41b3cef1') in 0.002463 seconds 
-  Import took 0.006578 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.014646 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2af580eb8dadf35266c2996d97e551e7') in 0.002284 seconds 
-  Import took 0.005971 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.631265 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87bc32cc249d09d0e5dc28b5186d14e0') in 0.002454 seconds 
-  Import took 0.006347 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004753 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.121 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1123ms)
-		BeginReloadAssembly (223ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (17ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (96ms)
-		EndReloadAssembly (836ms)
-			LoadAssemblies (115ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (306ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (295ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (83ms)
-				ProcessInitializeOnLoadAttributes (189ms)
-				ProcessInitializeOnLoadMethodAttributes (11ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.2 MB.
-System memory in use after: 99.4 MB.
-
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2722.
-Total: 2.988100 ms (FindLiveObjects: 0.176700 ms CreateObjectMapping: 0.081700 ms MarkObjects: 2.677400 ms  DeleteObjects: 0.051700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 24.546739 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6673f62d8255cc3002db904a8725782e') in 0.006451 seconds 
-  Import took 0.022883 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.622130 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43e3b4dfd90f06b940f1b5e994497f78') in 0.002341 seconds 
-  Import took 0.016641 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.200017 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9427ab9db24b001e5ea1bc86e5d90f9f') in 0.002499 seconds 
-  Import took 0.019158 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.867422 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0ffc4bb3c0fc6964ff8b76cde6bcf0e') in 0.002520 seconds 
-  Import took 0.006369 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.149284 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2fc35490be05bca777869226808589') in 0.002325 seconds 
-  Import took 0.012381 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.824826 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea3c54de7ce651c4bc40205633b0edf7') in 0.002084 seconds 
-  Import took 0.006990 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.074965 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6c527818d682b8a4692147d25b2d5f9') in 0.002262 seconds 
-  Import took 0.007350 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.143983 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58582c180f9aa10c5cb567be792ab09c') in 0.002232 seconds 
-  Import took 0.008495 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.193222 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3a730c65a549846089896175a76b96') in 0.001987 seconds 
-  Import took 0.010176 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.619166 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08533d11640d83ded3f6bdde07b27f26') in 0.002262 seconds 
-  Import took 0.006345 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.503457 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2dcbd35bdee6efa4d9d59a6793ee8fa') in 0.002214 seconds 
-  Import took 0.009449 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.609708 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3340d1c1740492222a6efe1a5450fdd8') in 0.002204 seconds 
-  Import took 0.007374 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.817142 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ead4b2718fc528885e4abf2fe642ea6e') in 0.002133 seconds 
-  Import took 0.005978 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.364303 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce9def03d5f05c6d53eda2f7a9c44941') in 0.002020 seconds 
-  Import took 0.005667 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 119.054106 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf2a26fb961bacccd159e7998444993b') in 0.002486 seconds 
-  Import took 0.007303 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.732237 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fdabe277f6a7d20e944dff8876abef4') in 0.003759 seconds 
-  Import took 0.008672 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.230363 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '137a153ae6410dfbf253600b3cb983c9') in 0.002019 seconds 
-  Import took 0.009796 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.269153 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab954b9c73d722e16b477c1529e8dbc1') in 0.002165 seconds 
-  Import took 0.013952 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.114809 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '624ed6129bbd7c09bab666ad6b2f58b7') in 0.002058 seconds 
-  Import took 0.005859 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 85.342817 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ec8ee52e816eccbba9050c5e390a901') in 0.002146 seconds 
-  Import took 0.005918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 185.601839 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73e9bfb56cea82b73f413fdb5beb2521') in 0.002108 seconds 
-  Import took 0.006828 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.396653 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '465ba28f72962627369a153ea2a38597') in 0.002188 seconds 
-  Import took 0.006416 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.999689 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3942fea92525b86bf50f36e1cc029b10') in 0.002060 seconds 
-  Import took 0.015869 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 93.835562 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb2cf46df2e1b99c36e6b6732a33dadf') in 0.002192 seconds 
-  Import took 0.005765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.724595 seconds.
-  path: Assets/Scripts/MazeGenerator.cs
-  artifactKey: Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ea3a92c2ab45b6071b0e7669958b80a') in 0.002286 seconds 
-  Import took 0.006472 seconds .
+Start importing Assets/Scripts/MazeGenerator.cs using Guid(d2ec069027f302f42aa3bf21f8a11e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c231efdde03de6fe725b5b126250e7fc') in 0.083802 seconds 
+  Import took 0.091953 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

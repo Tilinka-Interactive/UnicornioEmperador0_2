@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeGenerator : MonoBehaviour
+
+public class MazeGenerator : Object
 {
     private int dimensionX, dimensionY; 
-    private int gridDimensionX, gridDimensionY;
-    private char[,] grid;
-    private char[,] grid2;
-    private CellClass[,] cells;
-    //private CellClass auxCellClass;
-
+    public int gridDimensionX, gridDimensionY;
+    public char[,] grid;
+    public CellClass[][] cells;
+    public CellClass aux;
+    private CellClass endCell;
+    private CellClass current;
+    private CellClass backtracking;
 
     public MazeGenerator(int xDimension, int yDimension)
     {
@@ -19,41 +21,42 @@ public class MazeGenerator : MonoBehaviour
         gridDimensionX = xDimension * 4 + 1;
         gridDimensionY = yDimension * 2 + 1;
         grid = new char[gridDimensionX,gridDimensionY];
-        grid2 = new char[xDimension,yDimension];
         Init();
-        GenerateMaze();
+        GenerateMaze(0,0);
     }
 
     private void Init()
     {
-        cells = new CellClass[dimensionX,dimensionY];
+        cells = new CellClass[dimensionX][];
+        for (int j = 0; j < dimensionX; j++)
+        {
+            cells[j] = new CellClass[dimensionY];
+        }
+
         for (int x = 0; x < dimensionX; x++)
         {
             for (int y = 0; y < dimensionY; y++)
             {
-                cells[x,y] = new CellClass(x, y, false);
+                cells[x][y] = new CellClass(x, y, false);
             }
         }
     }
 
-    private void GenerateMaze()
-    {
-        GenerateMaze(0, 0);
-    }
 
     private void GenerateMaze(int x, int y)
     {
+        //Debug.Log(GetCell(x, y));
         GenerateMaze(GetCell(x, y)); 
     }
 
-
     private void GenerateMaze(CellClass startAt)
     {
-        if (startAt == null) return;
+        //Debug.Log(startAt is null);
+        if (startAt is null) return;
         startAt.open = false;
         List<CellClass> cells = new List<CellClass>();
         cells.Add(startAt);
-
+        //Debug.Log("First While");
         while (!(cells.Count == 0))
         {
             int aux;
@@ -62,7 +65,9 @@ public class MazeGenerator : MonoBehaviour
             {
                 aux = UnityEngine.Random.Range(0, cells.Count);
                 cell = cells[aux];
+                //Debug.Log(cells[aux].x);
                 cells.RemoveAt(aux);
+                //if (cells[aux]) Debug.Log("Exists");
             }
             else
             {
@@ -78,7 +83,7 @@ public class MazeGenerator : MonoBehaviour
           };
             foreach (CellClass other in potentialNeighbors)
             {
-                if (other == null || other.wall || !other.open) continue;
+                if (other is null || other.wall || !other.open) continue;
                 neighbors.Add(other);
             }
 
@@ -90,28 +95,13 @@ public class MazeGenerator : MonoBehaviour
             cells.Add(selected);
         }
     }
-
-
+    
     public CellClass GetCell(int x, int y)
     {
-        if (cells.Rank > 1)
-        {
-            if (x < cells.GetUpperBound(1 - 1) + 1 && y < cells.GetUpperBound(2 - 1) + 1) return cells[x, y];
-            else return null;
-        }
-        else
-        { 
-            if (cells.Rank == 1)
-            {
-                if (x == 0 && y < cells.Length) return cells[x, y];
-                else return null;
-            }
-            if (cells.Rank == 0) return null;
-            else {
-                return null;
-            }
-        }
+        if (x < dimensionX && y < dimensionY && x >= 0 && y >=0) return cells[x][y];
+        else return null;
     }
+
 
     public void Solve (int startX, int startY)
     {
@@ -130,57 +120,153 @@ public class MazeGenerator : MonoBehaviour
                 cell.projectedDist = -1;
             }
         }
-        // cells still being considered
-        ArrayList<Cell> openCells = new ArrayList<>();
-        // cell being considered
-        Cell endCell = getCell(endX, endY);
-        if (endCell == null) return; // quit if end out of bounds
-        { // anonymous block to delete start, because not used later
-            Cell start = getCell(startX, startY);
-            if (start == null) return; // quit if start out of bounds
-            start.projectedDist = getProjectedDistance(start, 0, endCell);
-            start.visited = true;
-            openCells.add(start);
-        }
-        boolean solving = true;
+
+        List<CellClass> openCells = new List<CellClass>();
+        endCell = GetCell(endX, endY);
+
+        if (endCell is null) return; 
+        else
+            { 
+                CellClass start = GetCell(startX, startY);
+                if (start is null) return; 
+                start.projectedDist = GetProjectedDistance(start, 0, endCell);
+                start.visited = true;
+                openCells.Add(start);
+            }
+
+        bool solving = true;
+
         while (solving)
         {
-            if (openCells.isEmpty()) return; // quit, no path
-                                             // sort openCells according to least projected distance
-            Collections.sort(openCells, new Comparator<Cell>(){
-              @Override
-              public int compare(Cell cell1, Cell cell2)
+            if (openCells.Count == 0) return;
+            openCells.Sort();
+            current = openCells[0];
+            openCells.RemoveAt(0);
+
+
+            if (current == endCell) break; 
+            foreach (CellClass neighbor in current.neighbors)
             {
-                double diff = cell1.projectedDist - cell2.projectedDist;
-                if (diff > 0) return 1;
-                else if (diff < 0) return -1;
-                else return 0;
-            }
-        });
-        Cell current = openCells.remove(0); // pop cell least projectedDist
-        if (current == endCell) break; // at end
-        for (Cell neighbor : current.neighbors)
-        {
-            double projDist = getProjectedDistance(neighbor,
-                    current.travelled + 1, endCell);
-            if (!neighbor.visited || // not visited yet
-                    projDist < neighbor.projectedDist)
-            { // better path
+            double projDist = GetProjectedDistance(neighbor, current.travelled + 1, endCell);
+            if (!neighbor.visited || projDist < neighbor.projectedDist)
+            { 
                 neighbor.parent = current;
                 neighbor.visited = true;
                 neighbor.projectedDist = projDist;
                 neighbor.travelled = current.travelled + 1;
-                if (!openCells.contains(neighbor))
-                    openCells.add(neighbor);
+                if (!openCells.Contains(neighbor)) openCells.Add(neighbor);
             }
         }
     }
-    // create path from end to beginning
-    Cell backtracking = endCell;
-    backtracking.inPath = true;
-      while (backtracking.parent != null) {
-          backtracking = backtracking.parent;
-          backtracking.inPath = true;
-      }
-  }
+        backtracking = endCell;
+        backtracking.inPath = true;
+        while (backtracking.parent != null)
+        {
+            backtracking = backtracking.parent;
+            backtracking.inPath = true;
+        }
+    }
+
+    public double GetProjectedDistance(CellClass current, double travelled, CellClass end)
+    {
+        return travelled + Mathf.Abs(current.x - end.x) + Mathf.Abs(current.y - current.x);
+    }
+
+    public void UpdateGrid()
+    {
+        char backChar = ' ', wallChar = 'X', cellChar = '_', pathChar = '*';
+        
+        for (int x = 0; x < gridDimensionX; x++)
+        {
+            for (int y = 0; y < gridDimensionY; y++)
+            {
+                grid[x,y] = backChar;
+            }
+        }
+
+        for (int x = 0; x < gridDimensionX; x++)
+        {
+            for (int y = 0; y < gridDimensionY; y++)
+            {
+                if (x % 4 == 0 || y % 2 == 0)
+                    grid[x,y] = wallChar;
+            }
+        }
+
+        for (int x = 0; x < dimensionX; x++)
+        {
+            for (int y = 0; y < dimensionY; y++)
+            {
+                CellClass current = GetCell(x, y);
+                //Debug.Log(GetCell(x, y).x);
+                int gridX = x * 4 + 2, gridY = y * 2 + 1;
+                if (current.inPath)
+                {
+                    grid[gridX,gridY] = pathChar;
+                    if (current.IsCellBelowNeighbor())
+                        if (GetCell(x, y + 1).inPath)
+                        {
+                            grid[gridX,gridY + 1] = pathChar;
+                            grid[gridX + 1,gridY + 1] = backChar;
+                            grid[gridX - 1,gridY + 1] = backChar;
+                        }
+                        else
+                        {
+                            grid[gridX,gridY + 1] = cellChar;
+                            grid[gridX + 1,gridY + 1] = backChar;
+                            grid[gridX - 1,gridY + 1] = backChar;
+                        }
+                    if (current.IsCellRightNeighbor())
+                        if (GetCell(x + 1, y).inPath)
+                        {
+                            grid[gridX + 2,gridY] = pathChar;
+                            grid[gridX + 1,gridY] = pathChar;
+                            grid[gridX + 3,gridY] = pathChar;
+                        }
+                        else
+                        {
+                            grid[gridX + 2,gridY] = cellChar;
+                            grid[gridX + 1,gridY] = cellChar;
+                            grid[gridX + 3,gridY] = cellChar;
+                        }
+                }
+                else
+                {
+                    grid[gridX,gridY] = cellChar;
+                    if (current.IsCellBelowNeighbor())
+                    {
+                        grid[gridX,gridY + 1] = cellChar;
+                        grid[gridX + 1,gridY + 1] = backChar;
+                        grid[gridX - 1,gridY + 1] = backChar;
+                    }
+                    if (current.IsCellRightNeighbor())
+                    {
+                        grid[gridX + 2,gridY] = cellChar;
+                        grid[gridX + 1,gridY] = cellChar;
+                        grid[gridX + 3,gridY] = cellChar;
+                    }
+                }
+            }
+        }
+    }
+    public void draw()
+    {
+        UpdateGrid(); 
+        //Debug.Log(this);
+    }
+
+    public override string ToString()
+    {
+        //UpdateGrid();
+        string output = "";
+        for (int y = 0; y < gridDimensionY; y++)
+        {
+            for (int x = 0; x < gridDimensionX; x++)
+            {
+                output += grid[x,y];
+            }
+            output += "\n";
+        }
+        return output;
+    }
 }
