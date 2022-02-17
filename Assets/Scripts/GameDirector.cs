@@ -13,15 +13,12 @@ public class GameDirector : MonoBehaviour
     public Tile point;
     public Vector3 myVector;
     public int x, y;
-    //public Vector3Int location;
-    //maze.UpdateGrid();
     private void Start()
     {
         MazeGenerator maze;
         maze = new MazeGenerator(x, y);
+        maze.Solve(0, 0);
         maze.draw();
-        //maze.Solve(0,0);
-        //Debug.Log(maze.GetCell(0,1).wall);
         for (int i = 0; i < maze.gridDimensionX; i++)
         {
             for (int j = 0; j < maze.gridDimensionY; j++) {
@@ -30,11 +27,11 @@ public class GameDirector : MonoBehaviour
                 switch (maze.grid[i,j])
                 {
                     case 'X':
-                        tiles.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     case ' ':
-                        tiles.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
+                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
                         break;
 
                     case '_':

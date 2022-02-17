@@ -1,9 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CellClass : Object
 {
+    public int id;
     public int x;
     public int y;
     public List<CellClass> neighbors = new List<CellClass>();
@@ -14,17 +14,6 @@ public class CellClass : Object
     public double projectedDist;
     public bool wall = true;
     public bool open = true;
-
-    
-    public CellClass(int x, int y) 
-    {   /*
-        CellClass aux = gameObject.AddComponent<CellClass>();
-        aux.x = x;
-        aux.y = y;
-        aux.wall = true;
-        */
-        //CellClass(x, y, true);
-    }
     
     public CellClass (int x, int y, bool isWall)
     {
@@ -73,12 +62,21 @@ public class CellClass : Object
     {
         return x + y * 256;
     }
-    public int Compare(CellClass cell1, CellClass cell2)
-    {
-        double diff = cell1.projectedDist - cell2.projectedDist;
-        if (diff > 0) return 1;
-        else if (diff < 0) return -1;
-        else return 0;
-    }
 
+    /*
+    public int CompareTo(CellClass cell)
+    {
+        if (cell == null)
+            return 0;
+
+        else
+            return this.id.CompareTo(cell.id);
+    }
+    */
+
+    public bool Equals(CellClass other)
+    {
+        if (other == null) return false;
+        return (this.id.Equals(other.id));
+    }
 }
