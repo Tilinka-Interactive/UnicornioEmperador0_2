@@ -5,11 +5,11 @@ using UnityEngine.Tilemaps;
 
 public class GameDirector : MonoBehaviour
 {
-    public Tilemap tiles;
+    public Tilemap bases;
+    public Tilemap walls;
     public Tile road;
     public Tile wall;
     public Tile sideRoad;
-    public Tile water;
     public Tile point;
     public Vector3 myVector;
     public int x, y;
@@ -27,23 +27,23 @@ public class GameDirector : MonoBehaviour
                 switch (maze.grid[i,j])
                 {
                     case 'X':
-                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     case ' ':
-                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
+                        bases.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
                         break;
 
                     case '_':
-                        tiles.SetTile(Vector3Int.FloorToInt(myVector), road);
+                        bases.SetTile(Vector3Int.FloorToInt(myVector), road);
                         break;
 
                     case '*':
-                        tiles.SetTile(Vector3Int.FloorToInt(myVector), point);
+                        bases.SetTile(Vector3Int.FloorToInt(myVector), point);
                         break;
 
                     default:
-                        tiles.SetTile(Vector3Int.FloorToInt(myVector), water);
+                        bases.SetTile(Vector3Int.FloorToInt(myVector), road);
                         break;
                 }
             }
