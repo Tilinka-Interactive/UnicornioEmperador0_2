@@ -5,7 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class GameDirector : MonoBehaviour
 {
-    public Tilemap tiles;
+    public Tilemap basement;
+    public Tilemap walls;
     public Tile road;
     public Tile wall;
     public Tile sideRoad;
@@ -24,26 +25,41 @@ public class GameDirector : MonoBehaviour
             for (int j = 0; j < maze.gridDimensionY; j++) {
                
                     myVector = new Vector3(i + 0.0f, j + 0.0f, 0.0f);
+                //Basement
                 switch (maze.grid[i,j])
                 {
                     case 'X':
-                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        //walls.SetTile(Vector3Int.FloorToInt(myVector), road);
+                        //basement.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     case ' ':
-                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
+                        basement.SetTile(Vector3Int.FloorToInt(myVector), road);
                         break;
 
                     case '_':
-                        tiles.SetTile(Vector3Int.FloorToInt(myVector), road);
+                        basement.SetTile(Vector3Int.FloorToInt(myVector), road);
                         break;
 
                     case '*':
-                        tiles.SetTile(Vector3Int.FloorToInt(myVector), point);
+                        basement.SetTile(Vector3Int.FloorToInt(myVector), road);
+                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), point);
                         break;
 
                     default:
-                        tiles.SetTile(Vector3Int.FloorToInt(myVector), water);
+                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), water);
+                        break;
+                }
+                switch (maze.grid[i, j])
+                {
+                    case 'X':
+                        walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        //basement.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        break;
+
+
+                    default:
+                        //tiles.SetTile(Vector3Int.FloorToInt(myVector), water);
                         break;
                 }
             }
