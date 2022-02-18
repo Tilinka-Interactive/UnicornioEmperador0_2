@@ -7,12 +7,34 @@ public class GridMovement : MonoBehaviour
     private bool isMoving;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.2f;
+    public Joystick joystick;
+
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && !isMoving) StartCoroutine(MovePlayer(Vector3.up));
-        if (Input.GetKey(KeyCode.A) && !isMoving) StartCoroutine(MovePlayer(Vector3.left));
-        if (Input.GetKey(KeyCode.S) && !isMoving) StartCoroutine(MovePlayer(Vector3.down));
-        if (Input.GetKey(KeyCode.D) && !isMoving) StartCoroutine(MovePlayer(Vector3.right));
+        Vector3 aux;
+        if ((joystick.Horizontal != 0) && (joystick.Vertical != 0))
+        {
+            if ((joystick.Horizontal > 0f) && (joystick.Vertical > 0f) && !isMoving)
+            {
+                aux = new Vector3(1.0f, 0.5f, 0f);
+                StartCoroutine(MovePlayer(aux));
+            }
+            if ((joystick.Horizontal < 0f) && (joystick.Vertical < 0f) && !isMoving)
+            {
+                aux = new Vector3(-1.0f, -0.5f, 0f);
+                StartCoroutine(MovePlayer(aux));
+            }
+            if ((joystick.Horizontal < 0f) && (joystick.Vertical > 0f) && !isMoving)
+            {
+                aux = new Vector3(-1.0f, 0.5f, 0f);
+                StartCoroutine(MovePlayer(aux));
+            }
+            if ((joystick.Horizontal > 0f) && (joystick.Vertical < 0f) && !isMoving)
+            {
+                aux = new Vector3(1.0f, -0.5f, 0f);
+                StartCoroutine(MovePlayer(aux));
+            }
+        }
     }
 
     private IEnumerator MovePlayer(Vector3 direction)

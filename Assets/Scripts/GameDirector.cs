@@ -27,11 +27,11 @@ public class GameDirector : MonoBehaviour
                 switch (maze.grid[i,j])
                 {
                     case 'X':
-                        walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        //walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     case ' ':
-                        bases.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
+                        //bases.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
                         break;
 
                     case '_':

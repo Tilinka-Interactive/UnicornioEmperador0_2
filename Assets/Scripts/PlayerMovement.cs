@@ -7,10 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public Grid grid;
     public GameObject player;
     public float moveSpeed = 5f;
-
     private Vector3Int _targetCell;
     private Vector3 _targetPosition;
-
     private bool isMoving = false;
 
     private void Start()
@@ -54,15 +52,13 @@ public class PlayerMovement : MonoBehaviour
             _targetPosition = grid.CellToWorld(_targetCell);
         }
 
-        MoveToward(_targetPosition);
+       MoveToward(_targetPosition);
     }
 
     private void MoveToward(Vector3 target)
     {
         isMoving = true;
-
         transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
-
         isMoving = false;
     }
 }
