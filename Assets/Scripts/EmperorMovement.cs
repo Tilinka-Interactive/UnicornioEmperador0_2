@@ -18,10 +18,29 @@ public class EmperorMovement : MonoBehaviour
         float dirX;
         float dirY;
 
-        dirX = Input.GetAxis("Horizontal"); 
-        dirY = Input.GetAxis("Vertical");
+        if (Input.GetAxis("Horizontal") == 0)
+        {
+            dirX = Input.GetAxis("Horizontal");
+        }
+        else 
+        {
+            dirX = Input.GetAxis("Horizontal") - 0.2f;
+        }
+
+        if (Input.GetAxis("Vertical") == 0)
+        {
+            dirY = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            dirY = Input.GetAxis("Vertical") - 0.2f;
+        }
+
 
         
+
+        direction.Set(dirX, dirY);
+        direction.Normalize();
     }
     private void FixedUpdate()
     {
