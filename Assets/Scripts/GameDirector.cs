@@ -7,12 +7,10 @@ public class GameDirector : MonoBehaviour
 {
     public Tilemap bases;
     public Tilemap walls;
-    //public Tilemap collision;
     public Tile road;
     public Tile wall;
     public Tile sideRoad;
     public Tile point;
-    public Tile colliderTile;
     public Vector3 myVector;
     public int x, y;
     private void Start()
@@ -29,12 +27,10 @@ public class GameDirector : MonoBehaviour
                 switch (maze.grid[i,j])
                 {
                     case 'X':
-                        //collision.SetTile(Vector3Int.FloorToInt(myVector), colliderTile);
                         //walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     case ' ':
-                        //collision.SetTile(Vector3Int.FloorToInt(myVector), colliderTile);
                         //bases.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
                         break;
 
