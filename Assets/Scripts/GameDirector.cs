@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class GameDirector : MonoBehaviour
 {
+
+
     public Tilemap bases;
     public Tilemap walls;
     public Tile road;
@@ -13,11 +15,12 @@ public class GameDirector : MonoBehaviour
     public Tile point;
     public Vector3 myVector;
     public int x, y;
-    private void Start()
+    
+    private void Awake()
     {
         MazeGenerator maze;
         maze = new MazeGenerator(x, y);
-        maze.Solve(0, 0);
+        //maze.Solve(0, 0);
         maze.draw();
         for (int i = 0; i < maze.gridDimensionX; i++)
         {
@@ -27,11 +30,11 @@ public class GameDirector : MonoBehaviour
                 switch (maze.grid[i,j])
                 {
                     case 'X':
-                        //walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     case ' ':
-                        //bases.SetTile(Vector3Int.FloorToInt(myVector), sideRoad);
+                        walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     case '_':

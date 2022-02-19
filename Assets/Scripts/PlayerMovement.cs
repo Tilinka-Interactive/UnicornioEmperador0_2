@@ -1,64 +1,106 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private bool isMoving;
+    private Vector3 origPos, targetPos;
+    private float timeToMove = 0.2f;
+    public Joystick joystick;
+    public Tilemap tiles;
+    public Tile tile;
+    public Vector3Int location;
 
-    public Grid grid;
-    public GameObject player;
-    public float moveSpeed = 5f;
-    private Vector3Int _targetCell;
-    private Vector3 _targetPosition;
-    private bool isMoving = false;
-
-    private void Start()
+    void Update()
     {
-        // Get initial position of the player on the world grid
-        Vector3 initialPosition = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+        
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            location = tiles.WorldToCell(mp);
+            tiles.SetTile(location, tile);
+        }
 
-        _targetCell = grid.WorldToCell(initialPosition);
+        if (Input.GetMouseButton(1))
+        {
+            //Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            getTNormal();
+        }
+        
 
-        // Snap the player to the center of the initial cell
-        _targetPosition = grid.CellToWorld(_targetCell);
+
+        Vector3 aux;
+        if ((joystick.Horizontal != 0) && (joystick.Vertical != 0))
+        {
+            if ((joystick.Horizontal > 0f) && (joystick.Vertical > 0f) && !isMoving)
+            {
+                aux = new Vector3(1.0f, 0.5f, 0f);
+                if (getT(aux)) {
+                    Debug.Log("Wall!");
+                }
+                else
+                    StartCoroutine(MovePlayer(aux));
+            }
+            if ((joystick.Horizontal < 0f) && (joystick.Vertical < 0f) && !isMoving)
+            {
+                aux = new Vector3(-1.0f, -0.5f, 0f);
+                StartCoroutine(MovePlayer(aux));
+            }
+            if ((joystick.Horizontal < 0f) && (joystick.Vertical > 0f) && !isMoving)
+            {
+                aux = new Vector3(-1.0f, 0.5f, 0f);
+                StartCoroutine(MovePlayer(aux));
+            }
+            if ((joystick.Horizontal > 0f) && (joystick.Vertical < 0f) && !isMoving)
+            {
+                aux = new Vector3(1.0f, -0.5f, 0f);
+                StartCoroutine(MovePlayer(aux));
+            }
+        }
     }
 
-    private void Update()
-    {
-        Vector3Int gridMovement = new Vector3Int();
-
-        if (Input.GetKeyDown(KeyCode.W) && !isMoving)
-        {
-            gridMovement.x += 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.S ) && !isMoving)
-        {
-            gridMovement.x -= 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.A) && !isMoving)
-        {
-            gridMovement.y += 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.D) && !isMoving)
-        {
-            gridMovement.y -= 1;
-        }
-
-        if (gridMovement != Vector3Int.zero)
-        {
-            _targetCell += gridMovement;
-            _targetPosition = grid.CellToWorld(_targetCell);
-        }
-
-       MoveToward(_targetPosition);
-    }
-
-    private void MoveToward(Vector3 target)
+    private IEnumerator MovePlayer(Vector3 direction)
     {
         isMoving = true;
-        transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+        float elapsedTime = 0;
+        origPos = transform.position;
+        targetPos = origPos + direction;
+
+        while (elapsedTime < timeToMove)
+        {
+            transform.position = Vector3.Lerp(origPos, targetPos, (elapsedTime / timeToMove));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = targetPos;
+
         isMoving = false;
+    }
+
+    private bool getT(Vector3 posSiguiente)
+    {
+        
+        location = tiles.WorldToCell(posSiguiente);
+        if (tiles.GetTile(location))
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    private void getTNormal()
+    {
+        Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        location = tiles.WorldToCell(mp);
+        if (tiles.GetTile(location))
+        {
+            Debug.Log("Tile");
+        }
+        else
+            Debug.Log("Wall");
     }
 }
