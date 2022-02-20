@@ -37,26 +37,59 @@ public class PlayerMovement : MonoBehaviour
             if ((joystick.Horizontal > 0f) && (joystick.Vertical > 0f) && !isMoving)
             {
                 aux = new Vector3(1.0f, 0.5f, 0f);
-                if (getT(aux)) {
+                origPos = transform.position;
+                //targetPos = origPos + aux;
+                if (getT(origPos + aux)) {
                     Debug.Log("Wall!");
                 }
                 else
+                {
                     StartCoroutine(MovePlayer(aux));
+                }
+                    
             }
             if ((joystick.Horizontal < 0f) && (joystick.Vertical < 0f) && !isMoving)
             {
                 aux = new Vector3(-1.0f, -0.5f, 0f);
-                StartCoroutine(MovePlayer(aux));
+                origPos = transform.position;
+                //targetPos = origPos + aux;
+                if (getT(origPos+aux))
+                {
+                    Debug.Log("Wall!");
+                }
+                else
+                {
+                    targetPos = origPos + aux;
+                    StartCoroutine(MovePlayer(aux));
+                }
             }
             if ((joystick.Horizontal < 0f) && (joystick.Vertical > 0f) && !isMoving)
             {
                 aux = new Vector3(-1.0f, 0.5f, 0f);
-                StartCoroutine(MovePlayer(aux));
+                origPos = transform.position;
+                //targetPos = origPos + aux;
+                if (getT(origPos + aux))
+                {
+                    Debug.Log("Wall!");
+                }
+                else
+                {
+                    StartCoroutine(MovePlayer(aux));
+                }
             }
             if ((joystick.Horizontal > 0f) && (joystick.Vertical < 0f) && !isMoving)
             {
                 aux = new Vector3(1.0f, -0.5f, 0f);
-                StartCoroutine(MovePlayer(aux));
+                origPos = transform.position;
+                //targetPos = origPos + aux;
+                if (getT(origPos + aux))
+                {
+                    Debug.Log("Wall!");
+                }
+                else
+                {
+                    StartCoroutine(MovePlayer(aux));
+                }
             }
         }
     }
@@ -66,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
         isMoving = true;
         float elapsedTime = 0;
         origPos = transform.position;
+        //esta asignación debe hacerse antes
         targetPos = origPos + direction;
 
         while (elapsedTime < timeToMove)
@@ -82,7 +116,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool getT(Vector3 posSiguiente)
     {
-        
         location = tiles.WorldToCell(posSiguiente);
         if (tiles.GetTile(location))
         {
