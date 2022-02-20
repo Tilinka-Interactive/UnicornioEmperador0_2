@@ -7,30 +7,21 @@ public class PlayerMovement : MonoBehaviour
 {
     private bool isMoving;
     private Vector3 origPos, targetPos;
+    public Vector3 endPos;
     private float timeToMove = 0.2f;
     public Joystick joystick;
     public Tilemap tiles;
-    public Tile tile;
     public Vector3Int location;
+    public GameObject menuWin;
+    public GameObject JoyStick;
 
     void Update()
     {
-        
-        if (Input.GetMouseButton(0))
+        if (transform.position == (endPos)) 
         {
-            Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            location = tiles.WorldToCell(mp);
-            tiles.SetTile(location, tile);
+            JoyStick.SetActive(false);
+            menuWin.SetActive(true);
         }
-
-        if (Input.GetMouseButton(1))
-        {
-            //Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            getTNormal();
-        }
-        
-
-
         Vector3 aux;
         if ((joystick.Horizontal != 0) && (joystick.Vertical != 0))
         {
@@ -38,68 +29,33 @@ public class PlayerMovement : MonoBehaviour
             {
                 aux = new Vector3(1.0f, 0.5f, 0f);
                 origPos = transform.position;
-                //targetPos = origPos + aux;
-                if (getT(origPos + aux)) {
-                    Debug.Log("Wall!");
-                }
-                else
-                {
-                    StartCoroutine(MovePlayer(aux));
-                }
-                    
+                if (!getT(origPos + aux)) StartCoroutine(MovePlayer(aux, origPos));
             }
             if ((joystick.Horizontal < 0f) && (joystick.Vertical < 0f) && !isMoving)
             {
                 aux = new Vector3(-1.0f, -0.5f, 0f);
                 origPos = transform.position;
-                //targetPos = origPos + aux;
-                if (getT(origPos+aux))
-                {
-                    Debug.Log("Wall!");
-                }
-                else
-                {
-                    targetPos = origPos + aux;
-                    StartCoroutine(MovePlayer(aux));
-                }
+                if (!getT(origPos + aux)) StartCoroutine(MovePlayer(aux, origPos));
             }
             if ((joystick.Horizontal < 0f) && (joystick.Vertical > 0f) && !isMoving)
             {
                 aux = new Vector3(-1.0f, 0.5f, 0f);
                 origPos = transform.position;
-                //targetPos = origPos + aux;
-                if (getT(origPos + aux))
-                {
-                    Debug.Log("Wall!");
-                }
-                else
-                {
-                    StartCoroutine(MovePlayer(aux));
-                }
+                if (!getT(origPos + aux)) StartCoroutine(MovePlayer(aux, origPos));
             }
             if ((joystick.Horizontal > 0f) && (joystick.Vertical < 0f) && !isMoving)
             {
                 aux = new Vector3(1.0f, -0.5f, 0f);
                 origPos = transform.position;
-                //targetPos = origPos + aux;
-                if (getT(origPos + aux))
-                {
-                    Debug.Log("Wall!");
-                }
-                else
-                {
-                    StartCoroutine(MovePlayer(aux));
-                }
+                if (!getT(origPos + aux)) StartCoroutine(MovePlayer(aux, origPos));
             }
         }
     }
 
-    private IEnumerator MovePlayer(Vector3 direction)
+    private IEnumerator MovePlayer(Vector3 direction, Vector3 origPos)
     {
         isMoving = true;
         float elapsedTime = 0;
-        origPos = transform.position;
-        //esta asignación debe hacerse antes
         targetPos = origPos + direction;
 
         while (elapsedTime < timeToMove)
@@ -108,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
+        
         transform.position = targetPos;
 
         isMoving = false;
@@ -123,17 +79,5 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             return false;
-    }
-
-    private void getTNormal()
-    {
-        Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        location = tiles.WorldToCell(mp);
-        if (tiles.GetTile(location))
-        {
-            Debug.Log("Tile");
-        }
-        else
-            Debug.Log("Wall");
     }
 }

@@ -5,8 +5,6 @@ using UnityEngine.Tilemaps;
 
 public class GameDirector : MonoBehaviour
 {
-
-
     public Tilemap bases;
     public Tilemap walls;
     public Tile road;
@@ -15,6 +13,7 @@ public class GameDirector : MonoBehaviour
     public Tile point;
     public Vector3 myVector;
     public int x, y;
+    public PlayerMovement jugador;
     
     private void Awake()
     {
@@ -22,6 +21,8 @@ public class GameDirector : MonoBehaviour
         maze = new MazeGenerator(x, y);
         //maze.Solve(0, 0);
         maze.draw();
+        jugador.endPos = new Vector3((maze.gridDimensionX-3) - ((maze.gridDimensionY - 2)), (maze.gridDimensionX - 3) * 0.5f + ((maze.gridDimensionY - 2) * 0.5f), 0f);
+        Debug.Log("x: " +maze.gridDimensionX+" y: " +maze.gridDimensionY);
         for (int i = 0; i < maze.gridDimensionX; i++)
         {
             for (int j = 0; j < maze.gridDimensionY; j++) {
@@ -31,6 +32,7 @@ public class GameDirector : MonoBehaviour
                 {
                     case 'X':
                         walls.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        bases.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     case ' ':
@@ -43,6 +45,10 @@ public class GameDirector : MonoBehaviour
 
                     case '*':
                         bases.SetTile(Vector3Int.FloorToInt(myVector), point);
+                        break;
+
+                    case 'º':
+                        bases.SetTile(Vector3Int.FloorToInt(myVector), wall);
                         break;
 
                     default:

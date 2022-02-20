@@ -275,12 +275,12 @@ public class MazeGenerator : Object
     public void draw()
     {
         UpdateGrid();
+        grid[gridDimensionX - 3, gridDimensionY - 2] = 'º';
         //Debug.Log(this);
     }
 
     public override string ToString()
     {
-        //UpdateGrid();
         string output = "";
         for (int y = 0; y < gridDimensionY; y++)
         {
