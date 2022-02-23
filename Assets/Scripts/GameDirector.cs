@@ -21,6 +21,7 @@ public class GameDirector : MonoBehaviour
         maze = new MazeGenerator(x, y);
         //maze.Solve(0, 0);
         maze.draw();
+        jugador.crono.StartCrono();
         jugador.endPos = new Vector3((maze.gridDimensionX-3) - ((maze.gridDimensionY - 2)), (maze.gridDimensionX - 3) * 0.5f + ((maze.gridDimensionY - 2) * 0.5f), 0f);
         Debug.Log("x: " +maze.gridDimensionX+" y: " +maze.gridDimensionY);
         for (int i = 0; i < maze.gridDimensionX; i++)

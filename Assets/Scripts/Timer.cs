@@ -5,30 +5,40 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public Text UITexto;
-    private int contador = 0;
-    public int tiempoRestante = 20;
+    [SerializeField] Text UITexto;
+    [SerializeField] int seg;
+    private float restante;
+    private bool enMarcha;
     public GameMenu outGame;
     public GameObject MenuBack;
     public GameObject JoyStick;
-    private void Awake()
+    public PlayerMovement emperor;
+
+    public void StartCrono()
     {
-        InvokeRepeating("Cronometro", 0f, 1f);
-        UITexto.text = Time.time.ToString();
+        restante = (seg);
+        enMarcha = true;
     }
-    
-    private void Cronometro() 
+
+    private void Update()
     {
-        contador++;
-        if (tiempoRestante - contador >= 0)
+        if (enMarcha) 
         {
-            UITexto.text = (tiempoRestante - contador).ToString();
+            restante -= Time.deltaTime;
+            if (restante < 1)
+            {
+                enMarcha = false;
+                MenuBack.SetActive(true);
+                JoyStick.SetActive(false);
+                emperor.TimesOut();
+            }
+            int tempTime = Mathf.FloorToInt(restante);
+            UITexto.text = tempTime.ToString();
         }
-        else
-        {
-            MenuBack.SetActive(true);
-            JoyStick.SetActive(false);
-        } 
-            
+    }
+
+    public void StopCrono() 
+    {
+        enMarcha = false;
     }
 }
