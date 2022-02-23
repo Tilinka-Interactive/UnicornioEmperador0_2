@@ -907,8 +907,8 @@ MonoBehaviour:
   sideRoad: {fileID: 11400000, guid: de1b62966c0b02f4e8a5a23d7751baa3, type: 2}
   point: {fileID: 11400000, guid: de1b62966c0b02f4e8a5a23d7751baa3, type: 2}
   myVector: {x: 0, y: 0, z: 0}
-  x: 5
-  y: 5
+  x: 20
+  y: 20
   jugador: {fileID: 1615262287}
 --- !u!1 &467232252
 GameObject:
@@ -2534,7 +2534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UITexto: {fileID: 1014271347}
-  seg: 10
+  seg: 30
   outGame: {fileID: 658628938}
   MenuBack: {fileID: 71658684}
   JoyStick: {fileID: 203007790}

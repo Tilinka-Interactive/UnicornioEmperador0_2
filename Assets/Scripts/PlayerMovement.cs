@@ -10,8 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 endPos;
     private float timeToMove = 0.2f;
     private bool timesOut;
+    public Tile inPlaceTile;
+    public Tile coloredTile;
     public Joystick joystick;
-    public Tilemap tiles;
+    public Tilemap wallTiles;
+    public Tilemap baseTiles;
     public Vector3Int location;
     public GameObject menuWin;
     public GameObject JoyStick;
@@ -32,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 aux;
                 if ((joystick.Horizontal != 0) && (joystick.Vertical != 0))
                 {
+                    //setTileBase
                     if ((joystick.Horizontal > 0f) && (joystick.Vertical > 0f) && !isMoving)
                     {
                         aux = new Vector3(1.0f, 0.5f, 0f);
@@ -84,16 +88,17 @@ public class PlayerMovement : MonoBehaviour
 
     private bool getT(Vector3 posSiguiente)
     {
-        location = tiles.WorldToCell(posSiguiente);
-        if (tiles.GetTile(location))
-        {
-            return true;
-        }
-        else
-            return false;
+        location = wallTiles.WorldToCell(posSiguiente);
+        return wallTiles.GetTile(location);
     }
 
     public void TimesOut() {
         timesOut = true;
+    }
+
+    private void setTileBase(Vector3 posTile, Tile changeTile) 
+    {
+        location = wallTiles.WorldToCell(posTile);
+        baseTiles.SetTile(location, changeTile);
     }
 }
