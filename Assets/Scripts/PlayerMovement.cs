@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject menuWin;
     public GameObject JoyStick;
     public Timer crono;
-
+    public Text powerSpeedIndicator;
     void Update()
     {
         if (transform.position == (endPos)) 
@@ -118,15 +119,26 @@ public class PlayerMovement : MonoBehaviour
         baseTiles.SetTile(location, changeTile);
     }
 
-    public void PowerSpeed() 
+    public void ActivatePowerSpeed() 
     {
-        float timerPowerSpeed = 0;
-        while (timerPowerSpeed < 4.0f)
+        timeToMove = 0.1f;
+        StartCoroutine(playCounter(11.0f));
+    }
+
+    public IEnumerator playCounter(float powerTime)
+    {
+        float elapsedTime = 0;
+        while (elapsedTime < powerTime)
         {
-            timerPowerSpeed += Time.deltaTime;
-            timeToMove = 0.1f;
-            Debug.Log(timeToMove);
+            elapsedTime += Time.deltaTime;
+            powerSpeedIndicator.text = Mathf.RoundToInt(powerTime - elapsedTime).ToString();
+            yield return null;
         }
-        //timeToMove = 0.2f;
+        StopPowerSpeed();
+    }
+
+    public void StopPowerSpeed()
+    {
+        timeToMove = 0.2f;
     }
 }

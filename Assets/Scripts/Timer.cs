@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     [SerializeField] Text UITexto;
-    [SerializeField] int seg;
+    private string timePrefsName = "time";
     private float restante;
     private bool enMarcha;
     public GameMenu outGame;
@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 
     public void StartCrono()
     {
-        restante = (seg);
+        restante = (PlayerPrefs.GetInt(timePrefsName, 0));
         enMarcha = true;
     }
 

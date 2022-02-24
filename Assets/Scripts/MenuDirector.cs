@@ -6,13 +6,13 @@ public class MenuDirector : MonoBehaviour
 {
     private string xPrefsName = "x";
     private string yPrefsName = "y";
-    //private string timePrefsName = "time";
+    private string timePrefsName = "time";
 
     public void setMazeSize(float x)
     {
         PlayerPrefs.SetInt(xPrefsName, Mathf.FloorToInt(x));
-        Debug.Log(PlayerPrefs.GetInt(xPrefsName, 0));
         PlayerPrefs.SetInt(yPrefsName, Mathf.FloorToInt(x));
+        PlayerPrefs.SetInt(timePrefsName, (Mathf.FloorToInt(x)*4)+2);
     }
 
     public void setTime() 

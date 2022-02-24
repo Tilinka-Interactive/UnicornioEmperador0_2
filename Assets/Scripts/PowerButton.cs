@@ -7,7 +7,7 @@ public class PowerButton : MonoBehaviour
     public PlayerMovement Emperor;
     public void powerSpeed()
     {
-        Emperor.PowerSpeed();
+        Emperor.ActivatePowerSpeed();
     }
 
 }

@@ -13,14 +13,14 @@ public class GameDirector : MonoBehaviour
     public Tile point;
     public Vector3 myVector;
     private string xPrefsName = "x";
-    //private string yPrefsName = "y";
-    //private string timePrefsName = "time";
+    private string yPrefsName = "y";
     public int x, y;
     public PlayerMovement jugador;
     
     private void Awake()
     {
         x = PlayerPrefs.GetInt(xPrefsName, 0);
+        y = PlayerPrefs.GetInt(yPrefsName, 0);
         MazeGenerator maze;
         maze = new MazeGenerator(x, x);
         //maze.Solve(0, 0);
