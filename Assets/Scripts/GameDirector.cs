@@ -12,17 +12,13 @@ public class GameDirector : MonoBehaviour
     public Tile sideRoad;
     public Tile point;
     public Vector3 myVector;
-    private string xPrefsName = "x";
-    //private string yPrefsName = "y";
-    //private string timePrefsName = "time";
     public int x, y;
     public PlayerMovement jugador;
     
     private void Awake()
     {
-        x = PlayerPrefs.GetInt(xPrefsName, 0);
         MazeGenerator maze;
-        maze = new MazeGenerator(x, x);
+        maze = new MazeGenerator(x, y);
         //maze.Solve(0, 0);
         maze.draw();
         jugador.crono.StartCrono();
@@ -62,15 +58,5 @@ public class GameDirector : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void SaveData() 
-    { 
-    
-    }
-
-    private void LoadData() 
-    { 
-    
     }
 }

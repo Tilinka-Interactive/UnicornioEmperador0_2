@@ -57,7 +57,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -389,18 +388,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      cowboy_59: 7768042730126302993
-      cowboy_60: -6004526220204367217
-      cowboy_56: 8013937680511549316
-      cowboy_61: -8613993420216859980
-      cowboy_63: 5567504281237529039
-      cowboy_62: -6344284944377396293
-      cowboy_66: 1864608147715772156
-      cowboy_58: -7787132651275094598
-      cowboy_64: 3093614680914348627
-      cowboy_65: 7050758579210022233
-      cowboy_57: -8855446404767538349
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
