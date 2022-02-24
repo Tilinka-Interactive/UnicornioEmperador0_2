@@ -35,30 +35,45 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 aux;
                 if ((joystick.Horizontal != 0) && (joystick.Vertical != 0))
                 {
-                    //setTileBase
                     if ((joystick.Horizontal > 0f) && (joystick.Vertical > 0f) && !isMoving)
                     {
                         aux = new Vector3(1.0f, 0.5f, 0f);
                         origPos = transform.position;
-                        if (!getT(origPos + aux)) StartCoroutine(MovePlayer(aux, origPos));
+                        if (!getT(origPos + aux))
+                        {
+                            setTileBase(origPos, coloredTile);
+                            StartCoroutine(MovePlayer(aux, origPos));
+                        }
                     }
                     if ((joystick.Horizontal < 0f) && (joystick.Vertical < 0f) && !isMoving)
                     {
                         aux = new Vector3(-1.0f, -0.5f, 0f);
                         origPos = transform.position;
-                        if (!getT(origPos + aux)) StartCoroutine(MovePlayer(aux, origPos));
+                        if (!getT(origPos + aux))
+                        {
+                            setTileBase(origPos, coloredTile);
+                            StartCoroutine(MovePlayer(aux, origPos));
+                        }
                     }
                     if ((joystick.Horizontal < 0f) && (joystick.Vertical > 0f) && !isMoving)
                     {
                         aux = new Vector3(-1.0f, 0.5f, 0f);
                         origPos = transform.position;
-                        if (!getT(origPos + aux)) StartCoroutine(MovePlayer(aux, origPos));
+                        if (!getT(origPos + aux))
+                        {
+                            setTileBase(origPos, coloredTile);
+                            StartCoroutine(MovePlayer(aux, origPos));
+                        }
                     }
                     if ((joystick.Horizontal > 0f) && (joystick.Vertical < 0f) && !isMoving)
                     {
                         aux = new Vector3(1.0f, -0.5f, 0f);
                         origPos = transform.position;
-                        if (!getT(origPos + aux)) StartCoroutine(MovePlayer(aux, origPos));
+                        if (!getT(origPos + aux))
+                        {
+                            setTileBase(origPos, coloredTile);
+                            StartCoroutine(MovePlayer(aux, origPos));
+                        }
                     }
                 }
 
@@ -73,16 +88,17 @@ public class PlayerMovement : MonoBehaviour
         isMoving = true;
         float elapsedTime = 0;
         targetPos = origPos + direction;
-
         while (elapsedTime < timeToMove)
         {
             transform.position = Vector3.Lerp(origPos, targetPos, (elapsedTime / timeToMove));
             elapsedTime += Time.deltaTime;
+
             yield return null;
+            setTileBase(targetPos, inPlaceTile);
         }
         
         transform.position = targetPos;
-
+        
         isMoving = false;
     }
 
@@ -100,5 +116,17 @@ public class PlayerMovement : MonoBehaviour
     {
         location = wallTiles.WorldToCell(posTile);
         baseTiles.SetTile(location, changeTile);
+    }
+
+    public void PowerSpeed() 
+    {
+        float timerPowerSpeed = 0;
+        while (timerPowerSpeed < 4.0f)
+        {
+            timerPowerSpeed += Time.deltaTime;
+            timeToMove = 0.1f;
+            Debug.Log(timeToMove);
+        }
+        //timeToMove = 0.2f;
     }
 }
