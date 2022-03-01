@@ -41,4 +41,9 @@ public class Timer : MonoBehaviour
     {
         enMarcha = false;
     }
+
+    public void AddTime()
+    {
+        restante += 10;
+    }
 }

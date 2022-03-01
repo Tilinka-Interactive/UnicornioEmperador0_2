@@ -7,6 +7,7 @@ public class GameDirector : MonoBehaviour
 {
     public Tilemap bases;
     public Tilemap walls;
+    public Tilemap hint;
     public Tile road;
     public Tile wall;
     public Tile sideRoad;
@@ -16,22 +17,19 @@ public class GameDirector : MonoBehaviour
     private string yPrefsName = "y";
     public int x, y;
     public PlayerMovement jugador;
-    
+    private MazeGenerator maze;
     private void Awake()
     {
         x = PlayerPrefs.GetInt(xPrefsName, 0);
         y = PlayerPrefs.GetInt(yPrefsName, 0);
-        MazeGenerator maze;
         maze = new MazeGenerator(x, x);
-        //maze.Solve(0, 0);
+        //maze.Solve();
         maze.draw();
-        jugador.crono.StartCrono();
         jugador.endPos = new Vector3((maze.gridDimensionX-3) - ((maze.gridDimensionY - 2)), (maze.gridDimensionX - 3) * 0.5f + ((maze.gridDimensionY - 2) * 0.5f), 0f);
-        //Debug.Log("x: " +maze.gridDimensionX+" y: " +maze.gridDimensionY);
+        jugador.crono.StartCrono();
         for (int i = 0; i < maze.gridDimensionX; i++)
         {
             for (int j = 0; j < maze.gridDimensionY; j++) {
-               
                     myVector = new Vector3(i + 0.0f, j + 0.0f, 0.0f);
                 switch (maze.grid[i,j])
                 {
@@ -64,13 +62,20 @@ public class GameDirector : MonoBehaviour
         }
     }
 
-    private void SaveData() 
-    { 
-    
-    }
-
-    private void LoadData() 
-    { 
-    
+    public void GaveHint()
+    {
+        maze.Solve();
+        maze.draw();
+        for (int i = 0; i < maze.gridDimensionX; i++)
+        {
+            for (int j = 0; j < maze.gridDimensionY; j++)
+            {
+                myVector = new Vector3(i + 0.0f, j + 0.0f, 0.0f);
+                if (maze.grid[i, j] == '*')
+                {
+                    hint.SetTile(Vector3Int.FloorToInt(myVector), point);
+                }
+            }
+        }
     }
 }

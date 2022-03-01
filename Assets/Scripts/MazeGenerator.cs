@@ -96,11 +96,11 @@ public class MazeGenerator : Object
         return x < dimensionX && y < dimensionY && x >= 0 && y >= 0 ? cells[x][y] : null;
     }
 
-    public void Solve(int startX, int startY)
+    public void Solve()
     {
-        Solve(startX, startY, dimensionX - 1, dimensionY - 1);
+        Solve(0, 0, dimensionX - 1, dimensionY - 1);
     }
-    public void Solve(int startX, int startY, int endX, int endY)
+    private void Solve(int startX, int startY, int endX, int endY)
     {
         foreach (CellClass[] cellrow in cells)
         {
@@ -180,7 +180,6 @@ public class MazeGenerator : Object
                 }
             }
         }
-        //Debug.Log("Pre-cellClass Backtracking");
         CellClass backtracking = endCell;
         backtracking.inPath = true;
         while (!(backtracking.parent is null))

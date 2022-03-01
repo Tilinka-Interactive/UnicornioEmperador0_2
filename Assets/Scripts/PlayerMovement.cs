@@ -40,9 +40,9 @@ public class PlayerMovement : MonoBehaviour
                     {
                         aux = new Vector3(1.0f, 0.5f, 0f);
                         origPos = transform.position;
-                        if (!getT(origPos + aux))
+                        if (!GetT(origPos + aux))
                         {
-                            setTileBase(origPos, coloredTile);
+                            SetTileBase(origPos, coloredTile);
                             StartCoroutine(MovePlayer(aux, origPos));
                         }
                     }
@@ -50,9 +50,9 @@ public class PlayerMovement : MonoBehaviour
                     {
                         aux = new Vector3(-1.0f, -0.5f, 0f);
                         origPos = transform.position;
-                        if (!getT(origPos + aux))
+                        if (!GetT(origPos + aux))
                         {
-                            setTileBase(origPos, coloredTile);
+                            SetTileBase(origPos, coloredTile);
                             StartCoroutine(MovePlayer(aux, origPos));
                         }
                     }
@@ -60,9 +60,9 @@ public class PlayerMovement : MonoBehaviour
                     {
                         aux = new Vector3(-1.0f, 0.5f, 0f);
                         origPos = transform.position;
-                        if (!getT(origPos + aux))
+                        if (!GetT(origPos + aux))
                         {
-                            setTileBase(origPos, coloredTile);
+                            SetTileBase(origPos, coloredTile);
                             StartCoroutine(MovePlayer(aux, origPos));
                         }
                     }
@@ -70,9 +70,9 @@ public class PlayerMovement : MonoBehaviour
                     {
                         aux = new Vector3(1.0f, -0.5f, 0f);
                         origPos = transform.position;
-                        if (!getT(origPos + aux))
+                        if (!GetT(origPos + aux))
                         {
-                            setTileBase(origPos, coloredTile);
+                            SetTileBase(origPos, coloredTile);
                             StartCoroutine(MovePlayer(aux, origPos));
                         }
                     }
@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             elapsedTime += Time.deltaTime;
 
             yield return null;
-            setTileBase(targetPos, inPlaceTile);
+            SetTileBase(targetPos, inPlaceTile);
         }
         
         transform.position = targetPos;
@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         isMoving = false;
     }
 
-    private bool getT(Vector3 posSiguiente)
+    private bool GetT(Vector3 posSiguiente)
     {
         location = wallTiles.WorldToCell(posSiguiente);
         return wallTiles.GetTile(location);
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         timesOut = true;
     }
 
-    private void setTileBase(Vector3 posTile, Tile changeTile) 
+    private void SetTileBase(Vector3 posTile, Tile changeTile) 
     {
         location = wallTiles.WorldToCell(posTile);
         baseTiles.SetTile(location, changeTile);
@@ -122,10 +122,10 @@ public class PlayerMovement : MonoBehaviour
     public void ActivatePowerSpeed() 
     {
         timeToMove = 0.1f;
-        StartCoroutine(playCounter(11.0f));
+        StartCoroutine(PlayCounter(11.0f));
     }
 
-    public IEnumerator playCounter(float powerTime)
+    public IEnumerator PlayCounter(float powerTime)
     {
         float elapsedTime = 0;
         while (elapsedTime < powerTime)
