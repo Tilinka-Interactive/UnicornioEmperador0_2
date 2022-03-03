@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
             if (!timesOut)
             {
                 Vector3 aux;
-                if ((joystick.Horizontal != 0) && (joystick.Vertical != 0))
+                if ((joystick.Horizontal != 0) && (joystick.Vertical != 0) )
                 {
                     if ((joystick.Horizontal > 0f) && (joystick.Vertical > 0f) && !isMoving)
                     {
