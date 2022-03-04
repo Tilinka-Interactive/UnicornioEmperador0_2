@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 {
     private bool isMoving;
     private bool timesOut;
-    private bool isSpeedOn;
     private bool isJetPackOn;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.2f;
@@ -52,14 +51,11 @@ public class PlayerMovement : MonoBehaviour
                     else
                     {
                         Debug.Log("Rocket activated");
-                        timeToMove = 0.1f;
                         aux = new (10f, 5f, 0f);
                         Vector3 resta = new (1.0f, 0.5f, 0f);
                         origPos = transform.position;
-                        SetTileBase(origPos, coloredTile);
-                        StartCoroutine(MovePlayer(GetTJet(aux, resta), origPos));
-                        if (isSpeedOn) timeToMove = 0.1f;
-                        else timeToMove = 0.2f;
+                        SetTileBase(GetTJet(aux + origPos, resta), coloredTile);
+                        StartCoroutine(MovePlayerPropeled(GetTJet(aux + origPos, resta), origPos));
                         isJetPackOn = false;
                     }
                     
@@ -108,11 +104,24 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = Vector3.Lerp(origPos, targetPos, (elapsedTime / timeToMove));
             elapsedTime += Time.deltaTime;
-
             yield return null;
             SetTileBase(targetPos, inPlaceTile);
         }
         transform.position = targetPos;
+        isMoving = false;
+    }
+
+    private IEnumerator MovePlayerPropeled(Vector3 direction, Vector3 origPos)
+    {
+        isMoving = true;
+        float elapsedTime = 0;
+        while (elapsedTime < 0.1f)
+        {
+            transform.position = Vector3.Lerp(origPos, direction, (elapsedTime / timeToMove));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = direction;
         isMoving = false;
     }
 
@@ -125,10 +134,17 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 GetTJet(Vector3 final, Vector3 vectorResta)
     {
-        while (!GetT(final)) {
-            final = -vectorResta;
+        if (final == vectorResta) {
+            return transform.position;
         }
-        return final;
+        if (GetT(final))
+        {
+            return final;
+        }
+        else {
+            final -= vectorResta;
+            return GetTJet(final, vectorResta);
+        }
     }
 
     public void TimesOut() {
@@ -143,9 +159,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void ActivatePowerSpeed() 
     {
-        isSpeedOn = true;
         timeToMove = 0.1f;
-        StartCoroutine(PlayCounter(11.0f));
+        StartCoroutine(PlayCounter(10.0f));
     }
 
     public void ActivatePowerJetPack()
@@ -167,9 +182,6 @@ public class PlayerMovement : MonoBehaviour
             powerSpeedIndicator.text = Mathf.RoundToInt(powerTime - elapsedTime).ToString();
             yield return null;
         }
-        isSpeedOn = false;
         StopPowerSpeed();
     }
-
-    
 }
