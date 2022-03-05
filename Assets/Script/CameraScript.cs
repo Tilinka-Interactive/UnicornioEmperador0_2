@@ -20,21 +20,15 @@ public class CameraScript : MonoBehaviour
 
     }
 
-    public void bigEye()
-    { 
-        
-  
-    }
-
     public void ActivatePowerBigEye()
     {
-        
+        Camera.main.orthographicSize = 15;
         StartCoroutine(PlayCounter(10.0f));
     }
 
     public void StopPowerBigEye()
     {
-
+        Camera.main.orthographicSize = 5;
     }
 
     public IEnumerator PlayCounter(float powerTime)

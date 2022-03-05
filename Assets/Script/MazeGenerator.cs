@@ -264,7 +264,7 @@ public class MazeGenerator : Object
                     if (current.IsCellRightNeighbor())
                     {
                         grid[gridX + 2, gridY] = cellChar;
-                        grid[gridX + 1, gridY] = cellChar;
+                        grid[gridX + 1, gridY] = cellChar;  
                         grid[gridX + 3, gridY] = cellChar;
                     }
                 }

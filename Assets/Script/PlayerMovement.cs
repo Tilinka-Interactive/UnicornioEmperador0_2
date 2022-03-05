@@ -9,11 +9,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving;
     private bool timesOut;
     private bool isJetPackOn;
+    private bool isSpeedOn;
+    private bool isJumpOn;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.2f;
     public Vector3 endPos;
     public Tile inPlaceTile;
     public Tile coloredTile;
+    public Tile baseTile;
     public Joystick joystick;
     public Tilemap wallTiles;
     public Tilemap baseTiles;
@@ -40,17 +43,33 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (!isJetPackOn)
                     {
-                        aux = new Vector3(1.0f, 0.5f, 0f);
-                        origPos = transform.position;
-                        if (GetT(origPos + aux))
+                        if (!isJumpOn)
                         {
-                            SetTileBase(origPos, coloredTile);
-                            StartCoroutine(MovePlayer(aux, origPos));
+                            aux = new Vector3(1f, 0.5f, 0f);
+                            origPos = transform.position;
+                            if (GetT(origPos + aux))
+                            {
+                                SetTileBase(origPos, coloredTile);
+                                StartCoroutine(MovePlayer(aux, origPos));
+                            }
                         }
+                        else
+                        {
+                            DeactivatePowerJump();
+                            aux = new Vector3(2f, 1f, 0f);
+                            origPos = transform.position;
+                            if (GetT(origPos + aux))
+                            {
+                                SetTileBase(origPos, coloredTile);
+                                StartCoroutine(MovePlayer(aux, origPos));
+                                isJumpOn = false;
+                            }
+                        }
+                        
                     }
                     else
                     {
-                        Debug.Log("Rocket activated");
+                        //Debug.Log("Rocket activated");
                         aux = new (10f, 5f, 0f);
                         Vector3 resta = new (1.0f, 0.5f, 0f);
                         origPos = transform.position;
@@ -58,36 +77,122 @@ public class PlayerMovement : MonoBehaviour
                         StartCoroutine(MovePlayerPropeled(GetTJet(aux + origPos, resta), origPos));
                         isJetPackOn = false;
                     }
-                    
                 }
                 if ((joystick.Horizontal < 0f) && (joystick.Vertical < 0f))
                 {
-                    aux = new Vector3(-1.0f, -0.5f, 0f);
-                    origPos = transform.position;
-                    if (GetT(origPos + aux))
+                    if (!isJetPackOn)
                     {
-                        SetTileBase(origPos, coloredTile);
-                        StartCoroutine(MovePlayer(aux, origPos));
+                        if (!isJumpOn)
+                        {
+                            aux = new Vector3(-1.0f, -0.5f, 0f);
+                            origPos = transform.position;
+                            if (GetT(origPos + aux))
+                            {
+                                SetTileBase(origPos, coloredTile);
+                                StartCoroutine(MovePlayer(aux, origPos));
+                            }
+                        }
+                        else 
+                        {
+                            DeactivatePowerJump();
+                            aux = new Vector3(-2f, -1f, 0f);
+                            origPos = transform.position;
+                            if (GetT(origPos + aux))
+                            {
+                                SetTileBase(origPos, coloredTile);
+                                StartCoroutine(MovePlayer(aux, origPos));
+                                isJumpOn = false;
+                            }
+                        }
+                        
+                    }
+                    else
+                    {
+                        Debug.Log("Rocket activated");
+                        aux = new(-10f, -5f, 0f);
+                        Vector3 resta = new(-1.0f, -0.5f, 0f);
+                        origPos = transform.position;
+                        SetTileBase(GetTJet(aux + origPos, resta), coloredTile);
+                        StartCoroutine(MovePlayerPropeled(GetTJet(aux + origPos, resta), origPos));
+                        isJetPackOn = false;
                     }
                 }
                 if ((joystick.Horizontal < 0f) && (joystick.Vertical > 0f))
                 {
-                    aux = new Vector3(-1.0f, 0.5f, 0f);
-                    origPos = transform.position;
-                    if (GetT(origPos + aux))
+                    if (!isJetPackOn)
                     {
-                        SetTileBase(origPos, coloredTile);
-                        StartCoroutine(MovePlayer(aux, origPos));
+                        if (!isJumpOn) 
+                        {
+                            aux = new Vector3(-1.0f, 0.5f, 0f);
+                            origPos = transform.position;
+                            if (GetT(origPos + aux))
+                            {
+                                SetTileBase(origPos, coloredTile);
+                                StartCoroutine(MovePlayer(aux, origPos));
+                            }
+                        }
+                        else
+                        {
+                            DeactivatePowerJump();
+                            aux = new Vector3(-2f, 1f, 0f);
+                            origPos = transform.position;
+                            if (GetT(origPos + aux))
+                            {
+                                SetTileBase(origPos, coloredTile);
+                                StartCoroutine(MovePlayer(aux, origPos));
+                                isJumpOn = false;
+                            }
+                        }
+                        
+                    }
+                    else
+                    {
+                        Debug.Log("Rocket activated");
+                        aux = new(-10f, 5f, 0f);
+                        Vector3 resta = new(-1.0f, 0.5f, 0f);
+                        origPos = transform.position;
+                        SetTileBase(GetTJet(aux + origPos, resta), coloredTile);
+                        StartCoroutine(MovePlayerPropeled(GetTJet(aux + origPos, resta), origPos));
+                        isJetPackOn = false;
                     }
                 }
                 if ((joystick.Horizontal > 0f) && (joystick.Vertical < 0f))
                 {
-                    aux = new Vector3(1.0f, -0.5f, 0f);
-                    origPos = transform.position;
-                    if (GetT(origPos + aux))
+                    if (!isJetPackOn)
                     {
-                        SetTileBase(origPos, coloredTile);
-                        StartCoroutine(MovePlayer(aux, origPos));
+                        if (!isJumpOn)
+                        {
+                            aux = new Vector3(1.0f, -0.5f, 0f);
+                            origPos = transform.position;
+                            if (GetT(origPos + aux))
+                            {
+                                SetTileBase(origPos, coloredTile);
+                                StartCoroutine(MovePlayer(aux, origPos));
+                            }
+                        }
+                        else 
+                        {
+                            DeactivatePowerJump();
+                            aux = new Vector3(2f, -1f, 0f);
+                            origPos = transform.position;
+                            if (GetT(origPos + aux))
+                            {
+                                SetTileBase(origPos, coloredTile);
+                                StartCoroutine(MovePlayer(aux, origPos));
+                                isJumpOn = false;
+                            }
+                        }
+                        
+                    }
+                    else
+                    {
+                        Debug.Log("Rocket activated");
+                        aux = new(10f, -5f, 0f);
+                        Vector3 resta = new(1.0f, -0.5f, 0f);
+                        origPos = transform.position;
+                        SetTileBase(GetTJet(aux + origPos, resta), coloredTile);
+                        StartCoroutine(MovePlayerPropeled(GetTJet(aux + origPos, resta), origPos));
+                        isJetPackOn = false;
                     }
                 }
             }
@@ -125,7 +230,6 @@ public class PlayerMovement : MonoBehaviour
         isMoving = false;
     }
 
-
     private bool GetT(Vector3 posSiguiente)
     {
         location = baseTiles.WorldToCell(posSiguiente);
@@ -157,10 +261,21 @@ public class PlayerMovement : MonoBehaviour
         baseTiles.SetTile(location, changeTile);
     }
 
+
+    //add function to stack powerup time
     public void ActivatePowerSpeed() 
     {
-        timeToMove = 0.1f;
-        StartCoroutine(PlayCounter(10.0f));
+        if (!isSpeedOn)
+        {
+            timeToMove = 0.1f;
+            StartCoroutine(PlayCounter(10.0f));
+        }
+        
+    }
+
+    public void StopPowerSpeed()
+    {
+        timeToMove = 0.2f;
     }
 
     public void ActivatePowerJetPack()
@@ -168,10 +283,36 @@ public class PlayerMovement : MonoBehaviour
         isJetPackOn = true;
     }
 
-    public void StopPowerSpeed()
+    //this has to be done in a layer above the Tilebase layer
+    public void ActivatePowerJump()
     {
-        timeToMove = 0.2f;
+        Vector3 origPos = transform.position;
+        isJumpOn = true;
+        Vector3 aux = new(2f, 1f, 0f);
+        if(GetT(origPos + aux)) SetTileBase(origPos + aux, inPlaceTile);
+        aux = new(-2f, -1f, 0f);
+        if (GetT(origPos + aux)) SetTileBase(origPos + aux, inPlaceTile);
+        aux = new(-2f, 1f, 0f);
+        if (GetT(origPos + aux)) SetTileBase(origPos + aux, inPlaceTile);
+        aux = new(2f, -1f, 0f);
+        if (GetT(origPos + aux)) SetTileBase(origPos + aux, inPlaceTile);
     }
+
+    //this has to be done in a layer above the Tilebase layer
+    public void DeactivatePowerJump()
+    {
+        Vector3 origPos = transform.position;
+        Vector3 aux = new(2f, 1f, 0f);
+        if (GetT(origPos + aux)) SetTileBase(origPos + aux, baseTile);
+        aux = new(-2f, -1f, 0f);
+        if (GetT(origPos + aux)) SetTileBase(origPos + aux, baseTile);
+        aux = new(-2f, 1f, 0f);
+        if (GetT(origPos + aux)) SetTileBase(origPos + aux, baseTile);
+        aux = new(2f, -1f, 0f);
+        if (GetT(origPos + aux)) SetTileBase(origPos + aux, baseTile);
+    }
+
+
 
     public IEnumerator PlayCounter(float powerTime)
     {
