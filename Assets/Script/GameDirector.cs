@@ -8,6 +8,8 @@ public class GameDirector : MonoBehaviour
     public Tilemap bases;
     public Tilemap walls;
     public Tilemap hint;
+    public Tile[] colorTile;
+    public Tile[] bwTile;
     public Tile road;
     public Tile wall;
     public Tile sideRoad;
@@ -43,15 +45,15 @@ public class GameDirector : MonoBehaviour
                         break;
 
                     case '_':
-                        bases.SetTile(Vector3Int.FloorToInt(myVector), road);
+                        bases.SetTile(Vector3Int.FloorToInt(myVector), getTile(bwTile));
                         break;
 
                     case '*':
-                        bases.SetTile(Vector3Int.FloorToInt(myVector), point);
+                        //bases.SetTile(Vector3Int.FloorToInt(myVector), point);
                         break;
 
                     case 'º':
-                        bases.SetTile(Vector3Int.FloorToInt(myVector), wall);
+                        bases.SetTile(Vector3Int.FloorToInt(myVector), getTile(colorTile));
                         break;
 
                     default:
@@ -77,5 +79,9 @@ public class GameDirector : MonoBehaviour
                 }
             }
         }
+    }
+
+    private Tile getTile(Tile[] list) {
+        return list[Random.Range(0, list.Length)];
     }
 }

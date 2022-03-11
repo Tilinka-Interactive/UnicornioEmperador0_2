@@ -176,27 +176,27 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 1.084227e-19
-      e01: -101155710
-      e02: -2.6166647e-29
-      e03: -6.9947395
-      e10: 8.28e-43
-      e11: 4.5904e-41
-      e12: 8.3e-43
-      e13: 8.27e-43
-      e20: 2.2e-44
-      e21: 1.2555972e+15
-      e22: 1.2554791e+15
-      e23: 1.2554791e+15
-      e30: 0
-      e31: 3.17e-43
-      e32: 3.17e-43
-      e33: 3.17e-43
+      e00: 1e-45
+      e01: 0
+      e02: 1.829618e-19
+      e03: 1.829618e-19
+      e10: 0
+      e11: 0
+      e12: 6.63e-43
+      e13: 6.63e-43
+      e20: -1.4253902e+12
+      e21: 6e-45
+      e22: -4.595281e-29
+      e23: -8.720171e+9
+      e30: 4.5904e-41
+      e31: 0
+      e32: 6.63e-43
+      e33: 6.66e-43
   m_TileColorArray:
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   - m_RefCount: 0
-    m_Data: {r: -2.6166647e-29, g: -2.6166647e-29, b: -2.6166647e-29, a: -2.6166647e-29}
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -629,7 +629,27 @@ MonoBehaviour:
   bases: {fileID: 39131787}
   walls: {fileID: 753311522}
   hint: {fileID: 695045208}
-  road: {fileID: 11400000, guid: 4cb85e696c0b8074cb667974b47bbd0b, type: 2}
+  colorTile:
+  - {fileID: 11400000, guid: eea43426f093a614cbc0eed70bd7898c, type: 2}
+  - {fileID: 11400000, guid: 68ec2bc767e927b44907ddbeadae3010, type: 2}
+  - {fileID: 11400000, guid: 993443ec490224e429f6123bfa0bf425, type: 2}
+  - {fileID: 11400000, guid: 26edfaf26fa978c4a87a4ad947af9f4c, type: 2}
+  - {fileID: 11400000, guid: 63b752bf31ddfe84495e53290731b832, type: 2}
+  - {fileID: 11400000, guid: 68f6bbd0e35d5424e978654a7d5cea9b, type: 2}
+  - {fileID: 11400000, guid: d6e42ab272e5b904c92095eb3d26f790, type: 2}
+  - {fileID: 11400000, guid: 288f84ed4323c234c8ede42557d422be, type: 2}
+  bwTile:
+  - {fileID: 11400000, guid: c95ffa18be1ddd14b8c06f3d6a0d9487, type: 2}
+  - {fileID: 11400000, guid: 28927c3a4d6057f4fb7353e3d214c390, type: 2}
+  - {fileID: 11400000, guid: 25855e15d305e6b4da319fedff021e49, type: 2}
+  - {fileID: 11400000, guid: 4cffbeb91355946408763f32040f225d, type: 2}
+  - {fileID: 11400000, guid: 9f10e0f29af9d364287456360ccfa50d, type: 2}
+  - {fileID: 11400000, guid: 5af1a385796b87249897d7d9c583d0fe, type: 2}
+  - {fileID: 11400000, guid: d06633079d8ad344884c027c83b66e41, type: 2}
+  - {fileID: 11400000, guid: c0dfee351bcbe204db373c7e64dde835, type: 2}
+  - {fileID: 11400000, guid: a14f0f7028006544b815e10512a88fc8, type: 2}
+  - {fileID: 11400000, guid: 8a619bda91c11fc499c236e6701ef803, type: 2}
+  road: {fileID: 11400000, guid: 25855e15d305e6b4da319fedff021e49, type: 2}
   wall: {fileID: 11400000, guid: de1b3b8377fd09e41b37ce9da14d7b4e, type: 2}
   sideRoad: {fileID: 11400000, guid: de1b62966c0b02f4e8a5a23d7751baa3, type: 2}
   point: {fileID: 11400000, guid: 196fcc9aeb2514b4caac65310f7dc3e1, type: 2}
