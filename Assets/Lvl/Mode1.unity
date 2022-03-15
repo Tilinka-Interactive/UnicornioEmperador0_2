@@ -404,7 +404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20.39}
+  m_AnchoredPosition: {x: 0, y: -20.390015}
   m_SizeDelta: {x: 116.88, y: 40.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &203542572
@@ -638,17 +638,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 68f6bbd0e35d5424e978654a7d5cea9b, type: 2}
   - {fileID: 11400000, guid: d6e42ab272e5b904c92095eb3d26f790, type: 2}
   - {fileID: 11400000, guid: 288f84ed4323c234c8ede42557d422be, type: 2}
+  - {fileID: 11400000, guid: c79fa6a072a4dc1429a6ab277529a2cf, type: 2}
+  - {fileID: 11400000, guid: 0e8cbe9ed961a434fadb4eaadd5074ad, type: 2}
+  - {fileID: 11400000, guid: e61f46392fd6df5488b9217d80904934, type: 2}
+  - {fileID: 11400000, guid: fd1d68e6968d0654383421c51d634ac6, type: 2}
   bwTile:
-  - {fileID: 11400000, guid: c95ffa18be1ddd14b8c06f3d6a0d9487, type: 2}
-  - {fileID: 11400000, guid: 28927c3a4d6057f4fb7353e3d214c390, type: 2}
-  - {fileID: 11400000, guid: 25855e15d305e6b4da319fedff021e49, type: 2}
-  - {fileID: 11400000, guid: 4cffbeb91355946408763f32040f225d, type: 2}
-  - {fileID: 11400000, guid: 9f10e0f29af9d364287456360ccfa50d, type: 2}
-  - {fileID: 11400000, guid: 5af1a385796b87249897d7d9c583d0fe, type: 2}
-  - {fileID: 11400000, guid: d06633079d8ad344884c027c83b66e41, type: 2}
-  - {fileID: 11400000, guid: c0dfee351bcbe204db373c7e64dde835, type: 2}
-  - {fileID: 11400000, guid: a14f0f7028006544b815e10512a88fc8, type: 2}
-  - {fileID: 11400000, guid: 8a619bda91c11fc499c236e6701ef803, type: 2}
+  - {fileID: 11400000, guid: 0c59a3b1bc562ea498f11a25b98c6bd3, type: 2}
+  - {fileID: 11400000, guid: 7d1be958c9b4a644aba2932dc8102ddb, type: 2}
+  - {fileID: 11400000, guid: 3f2d1422c30710b478110e3e448a7d19, type: 2}
+  - {fileID: 11400000, guid: 05817b2446dc09047aaaebe597e82b68, type: 2}
+  - {fileID: 11400000, guid: d9c2e17e37f065945a02ca9aeaf03f15, type: 2}
+  - {fileID: 11400000, guid: 015d60f2967edc8419b704d7482d32fb, type: 2}
+  - {fileID: 11400000, guid: 66d8e5d9e23441b4087e5accd190d98c, type: 2}
+  - {fileID: 11400000, guid: 8a3bb4f85d1c50247b9562d56b8ea08c, type: 2}
+  - {fileID: 11400000, guid: 5e7d34bb30f851b44834aa79b14cf444, type: 2}
+  - {fileID: 11400000, guid: 8bd2fb22b1167ec4da26ad047190b522, type: 2}
+  - {fileID: 11400000, guid: 78dab8a853447be4da95d5d141e54441, type: 2}
+  - {fileID: 11400000, guid: 4f15196718935614e9a1f21616df41d4, type: 2}
   road: {fileID: 11400000, guid: 25855e15d305e6b4da319fedff021e49, type: 2}
   wall: {fileID: 11400000, guid: de1b3b8377fd09e41b37ce9da14d7b4e, type: 2}
   sideRoad: {fileID: 11400000, guid: de1b62966c0b02f4e8a5a23d7751baa3, type: 2}
