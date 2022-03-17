@@ -37,11 +37,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else 
         {
-            if((joystick.Horizontal == 0) && (joystick.Vertical == 0) && !isMoving && !timesOut) Animator.SetBool("Running", false);
+            if((joystick.Horizontal == 0) && (joystick.Vertical == 0) && !isMoving && !timesOut) Animator.SetInteger("DirInt", 0);
             Vector3 aux;
             if ((joystick.Horizontal != 0) && (joystick.Vertical != 0) && !isMoving && !timesOut)
             {
-                Animator.SetBool("Running", true);
+                
                 if ((joystick.Horizontal > 0f) && (joystick.Vertical > 0f))
                 {
                     if (!isJetPackOn)
@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             aux = new Vector3(1f, 0.5f, 0f);
                             origPos = transform.position;
+                            Animator.SetInteger("DirInt", 1);
                             if (GetT(origPos + aux))
                             {
                                 SetTileBase(origPos, null);
@@ -88,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             aux = new Vector3(-1.0f, -0.5f, 0f);
                             origPos = transform.position;
+                            Animator.SetInteger("DirInt", 3);
                             if (GetT(origPos + aux))
                             {
                                 SetTileBase(origPos, null);
@@ -126,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             aux = new Vector3(-1.0f, 0.5f, 0f);
                             origPos = transform.position;
+                            Animator.SetInteger("DirInt", 2);
                             if (GetT(origPos + aux))
                             {
                                 SetTileBase(origPos, null);
@@ -164,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             aux = new Vector3(1.0f, -0.5f, 0f);
                             origPos = transform.position;
+                            Animator.SetInteger("DirInt", 4);
                             if (GetT(origPos + aux))
                             {
                                 SetTileBase(origPos, null);
