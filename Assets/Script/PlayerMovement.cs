@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumpOn;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.2f;
+    private int dirIdle;
     public Animator Animator;
     public Vector3 endPos;
     public Tile inPlaceTile;
@@ -26,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public Timer crono;
     public Text powerSpeedIndicator;
     public Tile[] colorTile;
-
+    
     void Update()
     {
         if (transform.position == (endPos)) 
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else 
         {
-            if((joystick.Horizontal == 0) && (joystick.Vertical == 0) && !isMoving && !timesOut) Animator.SetInteger("DirInt", 0);
+            if((joystick.Horizontal == 0) && (joystick.Vertical == 0) && !isMoving && !timesOut) Animator.SetInteger("DirInt", dirIdle *10);
             Vector3 aux;
             if ((joystick.Horizontal != 0) && (joystick.Vertical != 0) && !isMoving && !timesOut)
             {
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             aux = new Vector3(1f, 0.5f, 0f);
                             origPos = transform.position;
+                            dirIdle = 1;
                             Animator.SetInteger("DirInt", 1);
                             if (GetT(origPos + aux))
                             {
@@ -89,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             aux = new Vector3(-1.0f, -0.5f, 0f);
                             origPos = transform.position;
+                            dirIdle = 3;
                             Animator.SetInteger("DirInt", 3);
                             if (GetT(origPos + aux))
                             {
@@ -128,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             aux = new Vector3(-1.0f, 0.5f, 0f);
                             origPos = transform.position;
+                            dirIdle = 2;
                             Animator.SetInteger("DirInt", 2);
                             if (GetT(origPos + aux))
                             {
@@ -167,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             aux = new Vector3(1.0f, -0.5f, 0f);
                             origPos = transform.position;
+                            dirIdle = 4;
                             Animator.SetInteger("DirInt", 4);
                             if (GetT(origPos + aux))
                             {
