@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Lvl/Menu.unity
+    path: Assets/Scene/Menu.unity
     guid: 994012b7bf777184d95e1f63ea65f044
   - enabled: 1
-    path: Assets/Lvl/Mode1.unity
+    path: Assets/Scene/StoryMode.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scene/ArcadeMode.unity
+    guid: 80780359c7dce4b4dbabe18a95463efe
   m_configObjects: {}
